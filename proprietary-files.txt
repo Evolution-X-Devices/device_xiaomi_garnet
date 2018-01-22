@@ -2315,7 +2315,6 @@ vendor/firmware/5_heavyClick_P_RTP.bin:vendor/etc/vibrator/effect_5.bin
 
 # WiFi
 vendor/bin/cnss-daemon
-vendor/bin/cnss_diag
 vendor/etc/init/init.vendor.wlan.rc
 
 # WiFi Display
