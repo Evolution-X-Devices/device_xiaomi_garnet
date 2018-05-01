@@ -401,6 +401,7 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayGarnet \
     FrameworkOverlayGarnetGLEsim \
     FrameworkOverlayGarnetJPEsim \
+    LineageResXiaomi \
     LineageSDKOverlayGarnet \
     LineageSettingsOverlayGarnet \
     LineageSystemUIOverlayGarnet \
