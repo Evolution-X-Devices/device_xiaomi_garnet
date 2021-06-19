@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.primary.parrot \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    sound_trigger.primary.parrot
 
 PRODUCT_PACKAGES += \
     libagm_compress_plugin \
