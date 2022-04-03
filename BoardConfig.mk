@@ -82,6 +82,9 @@ $(foreach sku, CN GL, \
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 
+# Inherit from proprietary files for miuicamera
+-include vendor/xiaomi/garnet-miuicamera/products/board.mk
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_garnet
 TARGET_RECOVERY_DEVICE_MODULES := libinit_garnet
