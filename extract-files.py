@@ -57,6 +57,11 @@ blob_fixups: blob_fixups_user_type = {
             'libgrpc++_unsecure_prebuilt.so'
         ),
     (
+        'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',
+        'vendor/bin/hw/vendor.dolby.media.c2@1.0-service', 
+    ): blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
+    (
         'vendor/etc/camera/pureView_parameter.xml',
         'vendor/etc/camera/pureShot_parameter.xml'
     ): blob_fixup()
