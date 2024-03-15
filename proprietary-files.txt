@@ -88,6 +88,10 @@ vendor/lib64/libmisight.so
 # Audio libraries
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_diag.cfg
+vendor/etc/audio_policy_engine_configuration_mi.xml:vendor/etc/audio_policy_engine_configuration.xml
+vendor/etc/audio_policy_engine_default_stream_volumes.xml
+vendor/etc/audio_policy_engine_product_strategies.xml
+vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
