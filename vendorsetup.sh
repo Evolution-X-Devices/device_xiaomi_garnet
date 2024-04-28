@@ -1,0 +1,1 @@
+cd hardware/qcom-caf/sm8450/audio/pal && git checkout 4dfc6be2ac56b7d4aa5b2d919823e612ce1c711b && cd ../agm && git checkout 62ac0643c907e9566ed99929d947127d8e3b123e && cd ../../../../.. && rm -rf hardware/qcom-caf/sm8450/audio/graphservices
