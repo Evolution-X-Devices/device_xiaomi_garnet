@@ -31,31 +31,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-verify_pasr_support()
-{
-	ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
-	ddr_type5="08"
-       # MIUI ADD:
-       devicename=`getprop ro.product.device`
-
-         if [ -d /sys/kernel/mem-offline ]; then
-		#only LPDDR5 supports PAAR
-		if [ ${ddr_type:4:2} != $ddr_type5 ]; then
-			setprop vendor.pasr.activemode.enabled false
-		fi
-
-                setprop vendor.pasr.enabled false
-         fi
-
-       # MIUI ADD:
-       if [ "$devicename" == "liuqin" ]; then
-              echo 3 > /proc/sys/vm/page-cluster
-        else
-              echo 0 > /proc/sys/vm/page-cluster
-       fi
-
-}
-
 start_msm_irqbalance()
 {
          if [ -f /vendor/bin/msm_irqbalance ]; then
@@ -76,6 +51,5 @@ set_page_cluster()
 }
 # END
 start_msm_irqbalance
-verify_pasr_support
 # MIUI ADD:
 set_page_cluster
