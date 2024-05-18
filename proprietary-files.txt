@@ -1287,7 +1287,6 @@ vendor/etc/cacert_location.pem
 vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
-vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/vendor.wlan.lowirpcd.rc
 vendor/etc/izat.conf
@@ -1321,7 +1320,6 @@ vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
 vendor/lib64/libgnsspps.so
 vendor/lib64/libgps.utils.so
-vendor/lib64/libgrpc++_unsecure.so:vendor/lib64/libgrpc++_unsecure_prebuilt.so;FIX_SONAME
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/libjnihelper.so
@@ -1344,7 +1342,6 @@ vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqppe.so
 vendor/lib64/libslimclient.so
@@ -1738,27 +1735,29 @@ vendor/etc/init/poweropt-service.rc
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 
-# QCC
-system_ext/app/QCC/QCC.apk
-system_ext/bin/qccsyshal@1.2-service
-system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
-system_ext/lib64/libqcc.so
-system_ext/lib64/libqcc_file_agent_sys.so
-system_ext/lib64/libqccdme.so
-system_ext/lib64/libqccfileservice.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
-system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
-system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
-vendor/bin/qcc-trd
-vendor/etc/init/init.qdmastats.rc
-vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor
+# QCC - from ingot-user 14 UKQ1.231121.127 127 release-keys 
+system_ext/app/QCC/QCC.apk|1c54fc34506c733b7aa5ec8aaa05dcf594709f16
+system_ext/bin/qccsyshal@1.2-service|1d3fa5feff11e463204d31927cfb659f707989e1
+system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc|7279d09cf4d6f594dbab5c288ec16101bd668a95
+system_ext/lib64/libqcc.so|a9dbbaebc96295adb9f996268d540170e0ab9f25
+system_ext/lib64/libqcc_file_agent_sys.so|594caf0a2fba843dd34c87a7e4775cc1c25bc93a
+system_ext/lib64/libqccdme.so|c05eb3ae79142a0d7bef3664028560a257872c8d
+system_ext/lib64/libqccfileservice.so|8f46735705105dcd1237f45e311378512a844b4e
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so|196bce8c481180705cc04074af4fd8362f15f6d9
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so|cb060471bccda79a173bd26f58aea0e7162d65eb
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so|9663f4512a1e33956a9a348ac19b139ddfe02ee6
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so|db1ea124c0f42fcc1a814d69308d4f9522012e1b
+system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so|15a47e8d6f3746e3cb3baa91577f206a1089edd5
+system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so|ffccfde321f48e390c5af8d546e1c7cdf23f9152
+vendor/bin/qcc-trd|146a8d4ba56aebee8056f988159358943dc148c9|698da506a789666d3e0fde9bbd7f8af90c246844
+vendor/etc/init/init.qdmastats.rc|d7ddb87faaedd900f1756064fe756d50efed7ca9
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|459d506b20124520f5d650a7b30c9a490514a878
+vendor/lib64/libgrpc++_unsecure.so:vendor/lib64/libgrpc++_unsecure_prebuilt.so;FIX_SONAME|e0363df07498ac7f3beb9e6f017d79e2bbc53c9c|deef616f1a0fb091dbd553d807c097a7989f49fd
+vendor/lib64/libqcc_file_agent.so|2062da8684a791c3c8afe57f8be3d2b010337a8a
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE_SUFFIX=_vendor|ef866bab2186db1b2c09477e36fef20945fa671e
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so;MODULE_SUFFIX=_vendor|0677ebfe099cdaa6c3776d0bd5318044a4220918
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|304ce0a1571f218ba16d0812221e4b2fae52a6d9
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor|bfddf0a295b391bc1ed7961d547e9b56e3aa1b9c
 
 # QCOM system daemon
 vendor/bin/qcom-system-daemon
