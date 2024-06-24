@@ -288,7 +288,6 @@ on property:init.svc.vendor.charger=running
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     wait /sys/class/udc/${sys.usb.controller}
-    setprop sys.usb.configfs 1
     write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled 0
 
 on property:vendor.audio.cit.spkcal.copy=true
@@ -301,22 +300,22 @@ on property:vendor.audio.cit.spkcal.copy=true
 #
 # _if oldCaliFile isn't exist then  2 and 4 will failed(try again will success).
 # it could optimized when property action in front of spkcal
-# 
+#
 
     # 2.backup
     chmod 600 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 600 /mnt/vendor/persist/audio/crus_calr.txt
     copy /mnt/vendor/persist/audio/crus_calr.bin /mnt/vendor/persist/audio/crus_calr.bin.bak
     copy /mnt/vendor/persist/audio/crus_calr.txt /mnt/vendor/persist/audio/crus_calr.txt.bak
-    
+
     # 3.newCreate
     write /mnt/vendor/persist/audio/crus_calr.bin ""
     write /mnt/vendor/persist/audio/crus_calr.txt ""
-    
+
     # 4.recovery
     copy /mnt/vendor/persist/audio/crus_calr.bin.bak /mnt/vendor/persist/audio/crus_calr.bin
     copy /mnt/vendor/persist/audio/crus_calr.txt.bak /mnt/vendor/persist/audio/crus_calr.txt
-    
+
     chmod 666 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 666 /mnt/vendor/persist/audio/crus_calr.txt
 
