@@ -67,6 +67,9 @@ function blob_fixup() {
         vendor/etc/init/hw/init.batterysecret.rc|vendor/etc/init/hw/init.mi_thermald.rc|vendor/etc/init/hw/init.qti.kernel.rc)
             sed -i 's/on charger/on property:init.svc.vendor.charger=running/g' "${2}"
             ;;
+        vendor/etc/media_codecs_parrot_v0.xml)
+            sed -i -E '/media_codecs_(google_audio|google_telephony|vendor_audio)/d' "${2}"
+            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/dolby/!p' "${2}"
             ;;
