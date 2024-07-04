@@ -1,4 +1,5 @@
 # Bluetooth
+bluetooth.device_id.vendor_id=0x001D
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.controller.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
