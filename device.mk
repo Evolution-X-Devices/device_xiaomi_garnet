@@ -555,7 +555,8 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libhidlbase_shim:64
+    libhidlbase_shim:64 \
+	libutils.vendor:64
 
 # WiFi
 PRODUCT_PACKAGES += \
