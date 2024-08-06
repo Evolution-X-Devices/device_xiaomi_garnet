@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.AGMIPC@1.0-service
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    vendor.qti.hardware.pal@1.0-impl
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
@@ -68,6 +69,7 @@ PRODUCT_PACKAGES += \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libagmclient \
+    libagmmixer \
     libbatterylistener \
     libfmpal \
     libpalclient \
