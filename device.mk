@@ -537,6 +537,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libhidlbase_shim
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
