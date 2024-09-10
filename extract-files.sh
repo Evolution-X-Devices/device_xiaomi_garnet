@@ -100,6 +100,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libhidlbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
             ;;
+        vendor/lib*/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;            
         *)
             return 1
             ;;
