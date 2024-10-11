@@ -211,7 +211,7 @@ PRODUCT_PACKAGES += \
 TARGET_HAS_UDFPS := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
     libudfpshandler
 
 PRODUCT_COPY_FILES += \
