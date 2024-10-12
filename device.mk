@@ -191,9 +191,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
-# DPM
+# Shims
 PRODUCT_PACKAGES += \
-    libhidlbase_shim
+    libhidlbase_shim \
+    libinput_shim \
+    libgui_shim
 
 # DRM
 PRODUCT_PACKAGES += \
