@@ -183,7 +183,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor:64 \
     android.hardware.drm-service.clearkey \
-    libcrypto_shim
+    libcrypto_shim.vendor
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
