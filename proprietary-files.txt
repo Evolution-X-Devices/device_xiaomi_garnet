@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from garnet V816.0.9.0.UNRMIXM - miui_GARNETGlobal_OS1.0.9.0.UNRMIXM
+# All unpinned blobs below are extracted from garnet V816.0.17.0.UNRMIXM - miui_GARNETGlobal_OS1.0.17.0.UNRMIXM
 
 # ACDB
 vendor/etc/acdbdata/Mise/Mise_acdb_cal.acdb
@@ -1548,7 +1548,6 @@ vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/lowirpcd
 vendor/bin/mlid
-vendor/bin/qcc-trd
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
@@ -1559,7 +1558,6 @@ vendor/etc/cacert_location.pem
 vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
-vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/vendor.wlan.lowirpcd.rc
 vendor/etc/izat.conf
@@ -1591,7 +1589,6 @@ vendor/lib/libgeofencing.so
 vendor/lib/libgnss.so
 vendor/lib/libgnsspps.so
 vendor/lib/libgps.utils.so
-vendor/lib/libgrpc++_unsecure.so
 vendor/lib/libizat_client_api.so
 vendor/lib/libizat_core.so
 vendor/lib/libjnihelper.so
@@ -1614,7 +1611,6 @@ vendor/lib/liblowi_client.so
 vendor/lib/liblowi_common.so
 vendor/lib/liblowi_wifihal.so
 vendor/lib/libpal_net_if.so
-vendor/lib/libqcc_file_agent.so
 vendor/lib/libqdma_file_agent.so
 vendor/lib/libqppe.so
 vendor/lib/libslimclient.so
@@ -1644,7 +1640,6 @@ vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
 vendor/lib64/libgnsspps.so
 vendor/lib64/libgps.utils.so
-vendor/lib64/libgrpc++_unsecure.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/libjnihelper.so
@@ -1667,7 +1662,6 @@ vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqppe.so
 vendor/lib64/libslimclient.so
