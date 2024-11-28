@@ -35,20 +35,39 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.i(TAG, "Received intent: " + intent.getAction());
         switch (intent.getAction()) {
             case Intent.ACTION_LOCKED_BOOT_COMPLETED:
-                onLockedBootCompleted(context);
+                handleLockedBootCompleted(context);
                 break;
             case Intent.ACTION_BOOT_COMPLETED:
-                onBootCompleted(context);
+                handleBootCompleted(context);
                 break;
         }
     }
 
-    private static void onLockedBootCompleted(Context context) {
-            DozeUtils.onBootCompleted(context);
-            ThermalUtils.startService(context);
-            RefreshUtils.startService(context);
+    private void handleLockedBootCompleted(Context context) {
+        if (DEBUG) Log.i(TAG, "Handling locked boot completed.");
+        try {
+            // Start necessary services
+            startServices(context);
+        } catch (Exception e) {
+            Log.e(TAG, "Error during locked boot completed processing", e);
+        }
     }
 
-    private static void onBootCompleted(Context context) {
+    private void handleBootCompleted(Context context) {
+        if (DEBUG) Log.i(TAG, "Handling boot completed.");
+        // Add additional boot-completed actions if needed
+	}
+
+    private void startServices(Context context) {
+        if (DEBUG) Log.i(TAG, "Starting services...");
+
+        // Initialize Doze features
+        DozeUtils.onBootCompleted(context);
+
+        // Start Thermal Management Services
+        ThermalUtils.startService(context);
+
+        // Start Refresh Rate Service
+        RefreshUtils.startService(context);
     }
 }
