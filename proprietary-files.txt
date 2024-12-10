@@ -3,7 +3,6 @@
 # Current blobs with ELF checks disabled:
 # android.hardware.gnss-aidl-service-qti, android.hardware.gnss-aidl-impl-qti depend on undefined symbol _ZN4aidl7android8hardware4gnss5IGnss10descriptorE
 # audio.primary.parrot depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
-# libalhLDC, libalLDC, libMiVideoFilter, libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
 # libar-pal depends on libagmclient, which is a gnu makefile target
 # libawcal, libfsalgocal depends on libagmmixer, which is a gnu makefile target
 # libcne, libmasc, lowi-server, qms depend on libwpa_client, which is a gnu makefile target
@@ -818,7 +817,7 @@ vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libAF.so
 vendor/lib64/libHISCppAlgos.so
 vendor/lib64/libMiMotion.so
-vendor/lib64/libMiVideoFilter.so;DISABLE_CHECKELF
+vendor/lib64/libMiVideoFilter.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeDspV65Stub.so;FIX_SONAME
@@ -828,13 +827,13 @@ vendor/lib64/libSnpeHtpPrepare.so
 vendor/lib64/libSnpeHtpV68Stub.so
 vendor/lib64/libSnpeHtpV69Stub.so
 vendor/lib64/libSnpeHtpV73Stub.so
-vendor/lib64/libTrueSight.so;DISABLE_CHECKELF
+vendor/lib64/libTrueSight.so
 vendor/lib64/libXMFaceFocus.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalLDC.so
 vendor/lib64/libalLDC_p.so;FIX_SONAME
-vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC.so
 vendor/lib64/libalhLDC_p.so;FIX_SONAME
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
