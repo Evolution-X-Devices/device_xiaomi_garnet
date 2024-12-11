@@ -193,6 +193,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libbinder_shim \
     libhidlbase_shim \
     libinput_shim \
     libgui_shim
