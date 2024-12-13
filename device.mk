@@ -341,6 +341,7 @@ PRODUCT_PACKAGES += \
 
 # Mlipay
 PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mfidoca@1.0.vendor:64 \
     vendor.xiaomi.hardware.mlipay@1.1.vendor:64 \
     vendor.xiaomi.hardware.mtdservice@1.3.vendor:64
 
