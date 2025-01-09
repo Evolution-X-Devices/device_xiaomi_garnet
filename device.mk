@@ -318,7 +318,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libOmxCore \
     libcodec2_hidl@1.0.vendor \
     libstagefrighthw \
     libstagefright_softomx_plugin.vendor
