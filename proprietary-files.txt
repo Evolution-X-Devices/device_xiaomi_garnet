@@ -1739,10 +1739,6 @@ vendor/etc/init/poweropt-service.rc
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 
-# Psiclient
-vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-
 # QCC
 system_ext/app/QCC/QCC.apk
 system_ext/bin/qccsyshal@1.2-service
