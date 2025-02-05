@@ -27,9 +27,9 @@ genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup u:object_r:sysfs_wakeup:s0
 
 # Torch control
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/led:torch_0/brightness u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/led:torch_0/max_brightness u:object_r:sysfs_leds:s0
-genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/led:switch_2/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/brightness u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:torch_0/max_brightness u:object_r:sysfs_torch:s0
+genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-05/c42d000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds/led:switch_2/brightness u:object_r:sysfs_torch:s0
 
 # Walt
 genfscon proc /sys/walt u:object_r:proc_walt:s0
