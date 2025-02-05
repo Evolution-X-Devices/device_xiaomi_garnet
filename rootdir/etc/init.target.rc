@@ -95,7 +95,6 @@ on post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
 
     # add torch node for cit && mmi
-    chown system system /sys/class/leds/led:torch_0/brightness
     chown system system /sys/class/leds/led:torch_1/brightness
     chown system system /sys/class/leds/led:torch_2/brightness
     chown system system /sys/class/leds/led:torch_3/brightness
@@ -105,7 +104,6 @@ on post-fs-data
     chown system system /sys/class/leds/led:flash_3/brightness
     chown system system /sys/class/leds/led:switch_0/brightness
     chown system system /sys/class/leds/led:switch_1/brightness
-    chown system system /sys/class/leds/led:switch_2/brightness
     chown system system /sys/class/leds/led:switch_3/brightness
     chown system system /sys/class/leds/led:switch_0/trigger
     chown system system /sys/class/leds/led:switch_1/trigger
@@ -113,7 +111,6 @@ on post-fs-data
     chown system system /sys/class/leds/led:switch_3/trigger
     chown system system /sys/class/leds/flashlight/brightness
 
-    chmod 0664 /sys/class/leds/led:torch_0/brightness
     chmod 0664 /sys/class/leds/led:torch_1/brightness
     chmod 0664 /sys/class/leds/led:torch_2/brightness
     chmod 0664 /sys/class/leds/led:torch_3/brightness
@@ -123,7 +120,6 @@ on post-fs-data
     chmod 0664 /sys/class/leds/led:flash_3/brightnesssss
     chmod 0664 /sys/class/leds/led:switch_0/brightness
     chmod 0664 /sys/class/leds/led:switch_1/brightness
-    chmod 0664 /sys/class/leds/led:switch_2/brightness
     chmod 0664 /sys/class/leds/led:switch_3/brightness
     chmod 0664 /sys/class/leds/led:switch_0/trigger
     chmod 0664 /sys/class/leds/led:switch_1/trigger
@@ -281,22 +277,22 @@ on property:vendor.audio.cit.spkcal.copy=true
 #
 # _if oldCaliFile isn't exist then  2 and 4 will failed(try again will success).
 # it could optimized when property action in front of spkcal
-# 
+#
 
     # 2.backup
     chmod 600 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 600 /mnt/vendor/persist/audio/crus_calr.txt
     copy /mnt/vendor/persist/audio/crus_calr.bin /mnt/vendor/persist/audio/crus_calr.bin.bak
     copy /mnt/vendor/persist/audio/crus_calr.txt /mnt/vendor/persist/audio/crus_calr.txt.bak
-    
+
     # 3.newCreate
     write /mnt/vendor/persist/audio/crus_calr.bin ""
     write /mnt/vendor/persist/audio/crus_calr.txt ""
-    
+
     # 4.recovery
     copy /mnt/vendor/persist/audio/crus_calr.bin.bak /mnt/vendor/persist/audio/crus_calr.bin
     copy /mnt/vendor/persist/audio/crus_calr.txt.bak /mnt/vendor/persist/audio/crus_calr.txt
-    
+
     chmod 666 /mnt/vendor/persist/audio/crus_calr.bin
     chmod 666 /mnt/vendor/persist/audio/crus_calr.txt
 
