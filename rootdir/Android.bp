@@ -52,3 +52,9 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "etc/init.qcom.early_boot.sh",
+    vendor: true,
+}
