@@ -1,5 +1,15 @@
 # All unpinned blobs below are extracted from garnet V816.0.17.0.UNRMIXM - miui_GARNETGlobal_OS1.0.17.0.UNRMIXM
 
+# Current blobs with ELF checks disabled:
+# android.hardware.gnss-aidl-service-qti, android.hardware.gnss-aidl-impl-qti depend on undefined symbol _ZN4aidl7android8hardware4gnss5IGnss10descriptorE
+# audio.primary.parrot depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
+# libalhLDC, libalLDC, libMiVideoFilter, libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
+# libar-pal depends on libagmclient, which is a gnu makefile target
+# libawcal, libfsalgocal depends on libagmmixer, which is a gnu makefile target
+# libcne, libmasc, lowi-server, qms depend on libwpa_client, which is a gnu makefile target
+# libgarden, libgarden_haltests_e2e depend on undefined symbol _ZN4aidl7android8hardware4gnss5IGnss10fromBinderERKN3ndk10SpAIBinderE
+# libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
+
 # ACDB
 vendor/etc/acdbdata/Mise/Mise_acdb_cal.acdb
 vendor/etc/acdbdata/Mise/Mise_workspaceFileXml.qwsp
@@ -79,9 +89,9 @@ vendor/firmware/aw882xx_acf.bin
 vendor/firmware/fs19xx.fsm
 
 # Audio graph manager
--vendor/lib64/libagm.so
+vendor/lib64/libagm.so
 vendor/lib64/libmisight.so
--vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
 # Audio libraries
 vendor/etc/audio_cloud_control_white_list.xml
@@ -89,7 +99,7 @@ vendor/etc/audio_diag.cfg
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.parrot.so
+vendor/lib64/hw/audio.primary.parrot.so;DISABLE_CHECKELF
 vendor/lib64/hw/gyro_fusion_interface.so
 vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
@@ -97,16 +107,16 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
 vendor/lib64/libar-gsl.so
--vendor/lib64/libar-pal.so
+vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libaudioroute_ext.so
-vendor/lib64/libawcal.so
+vendor/lib64/libawcal.so;DISABLE_CHECKELF
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libfsalgocal.so
+vendor/lib64/libfsalgocal.so;DISABLE_CHECKELF
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 vendor/lib64/liblx-osal.so
@@ -160,7 +170,7 @@ vendor/lib64/libsysmon_cdsp_skel.so
 # CNE
 vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
-vendor/bin/qms
+vendor/bin/qms;DISABLE_CHECKELF
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -195,11 +205,11 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/qms.rc
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
-vendor/lib64/libmasc.so
+vendor/lib64/libmasc.so;DISABLE_CHECKELF
 vendor/lib64/libqms_client.so
 vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
@@ -811,24 +821,24 @@ vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libAF.so
 vendor/lib64/libHISCppAlgos.so
 vendor/lib64/libMiMotion.so
-vendor/lib64/libMiVideoFilter.so
+vendor/lib64/libMiVideoFilter.so;DISABLE_CHECKELF
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libSNPE.so
-vendor/lib64/libSnpeDspV65Stub.so
-vendor/lib64/libSnpeDspV66Stub.so
-vendor/lib64/libSnpeHta.so
+vendor/lib64/libSnpeDspV65Stub.so;FIX_SONAME
+vendor/lib64/libSnpeDspV66Stub.so;FIX_SONAME
+vendor/lib64/libSnpeHta.so;FIX_SONAME
 vendor/lib64/libSnpeHtpPrepare.so
 vendor/lib64/libSnpeHtpV68Stub.so
 vendor/lib64/libSnpeHtpV69Stub.so
 vendor/lib64/libSnpeHtpV73Stub.so
-vendor/lib64/libTrueSight.so
+vendor/lib64/libTrueSight.so;DISABLE_CHECKELF
 vendor/lib64/libXMFaceFocus.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalCFR.so
-vendor/lib64/libalLDC.so
-vendor/lib64/libalLDC_p.so
-vendor/lib64/libalhLDC.so
-vendor/lib64/libalhLDC_p.so
+vendor/lib64/libalLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalLDC_p.so;FIX_SONAME
+vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
+vendor/lib64/libalhLDC_p.so;FIX_SONAME
 vendor/lib64/libanc_hdr.so
 vendor/lib64/libancbase.so
 vendor/lib64/libarcsoft_beautyshot.so
@@ -931,6 +941,7 @@ vendor/lib64/libquickcamera.so
 vendor/lib64/librelight_only.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
+vendor/lib64/libdlrmsc.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsupermoon.so
 vendor/lib64/libswregistrationalgo.so
@@ -1160,7 +1171,7 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE=vendor.qti.diaghal@1.0-vendor
 
 # Display Calibration
 product/etc/displayconfig/display_id_4630946370515662722.xml:vendor/etc/displayconfig/display_id_4630946370515662722.xml
@@ -1252,8 +1263,8 @@ my_bigball/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/pe
 my_bigball/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED|4fb8d8ab0e1dbda1582361f48395f819367edb0a
 
 # Fingerprint
-odm/lib64/hw/fingerprint.fpc_fod.so:odm/lib64/hw/fingerprint.fpc_fod.default.so
-odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so
+odm/lib64/hw/fingerprint.fpc_fod.so:odm/lib64/hw/fingerprint.fpc_fod.default.so;FIX_SONAME
+odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 
@@ -1262,9 +1273,9 @@ vendor/app/CACertService/CACertService.apk
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
-vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+vendor/bin/hw/android.hardware.gnss-aidl-service-qti;DISABLE_CHECKELF
 vendor/bin/loc_launcher
-vendor/bin/lowi-server
+vendor/bin/lowi-server;DISABLE_CHECKELF
 vendor/bin/lowirpcd
 vendor/bin/mlid
 vendor/bin/slim_daemon
@@ -1292,7 +1303,7 @@ vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so;DISABLE_CHECKELF
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/libMiVDR.so
 vendor/lib64/libasn1cper.so
@@ -1304,8 +1315,8 @@ vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libengineplugin.so
-vendor/lib64/libgarden.so
-vendor/lib64/libgarden_haltests_e2e.so
+vendor/lib64/libgarden.so;DISABLE_CHECKELF
+vendor/lib64/libgarden_haltests_e2e.so;DISABLE_CHECKELF
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
@@ -1365,7 +1376,7 @@ vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
-vendor/lib/libadreno_app_profiles.so
+vendor/lib/libadreno_app_profiles.so;DISABLE_DEPS
 vendor/lib/libadreno_utils.so
 vendor/lib/libgpudataproducer.so
 vendor/lib/libgsl.so
@@ -1383,7 +1394,7 @@ vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_app_profiles.so;DISABLE_DEPS
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
 vendor/lib64/libgsl.so
@@ -1493,7 +1504,7 @@ vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
 vendor/lib64/libqc2audio_hooks.so
-vendor/lib64/libqc2audio_hwaudiocodec.so
+vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_CHECKELF
 vendor/lib64/libqc2audio_platform.so
 vendor/lib64/libqc2audio_swaudiocodec.so
 vendor/lib64/libqc2audio_utils.so
@@ -1598,10 +1609,10 @@ vendor/lib64/libQnnDsp.so
 vendor/lib64/libQnnDspNetRunExtensions.so
 vendor/lib64/libQnnDspV65CalculatorStub.so
 vendor/lib64/libQnnDspV65Stub.so
-vendor/lib64/libQnnDspV65StubInternal.so
+vendor/lib64/libQnnDspV65StubInternal.so;FIX_SONAME
 vendor/lib64/libQnnDspV66CalculatorStub.so
 vendor/lib64/libQnnDspV66Stub.so
-vendor/lib64/libQnnDspV66StubInternal.so
+vendor/lib64/libQnnDspV66StubInternal.so;FIX_SONAME
 vendor/lib64/libQnnGpu.so
 vendor/lib64/libQnnGpuNetRunExtensions.so
 vendor/lib64/libQnnGpuProfilingReader.so
@@ -1749,10 +1760,10 @@ system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 vendor/bin/qcc-trd
 vendor/etc/init/init.qdmastats.rc
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE=vendor.qti.hardware.qccsyshal@1.0-vendor
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so;MODULE=vendor.qti.hardware.qccsyshal@1.1-vendor
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE=vendor.qti.hardware.qccvndhal@1.0-vendor
 
 # QCOM system daemon
 vendor/bin/qcom-system-daemon
@@ -2075,7 +2086,7 @@ vendor/lib64/vendor.qti.ims.rcsuce@1.0.so
 vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
 vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0-vendor
 
 # SSR
 vendor/bin/ssr_diag
@@ -2309,11 +2320,9 @@ vendor/etc/init/init.vendor.wlan.rc
 
 # WiFi Display
 system/framework/WfdCommon.jar
-system_ext/bin/wfdservice
 system_ext/bin/wfdservice64
 system_ext/etc/init/wfdservice.rc
 system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
-system_ext/etc/seccomp_policy/wfdservice.policy
 system_ext/etc/seccomp_policy/wfdservice64.policy
 system_ext/etc/wfdconfigsink.xml
 system_ext/lib64/libmmosal.so
@@ -2377,7 +2386,7 @@ vendor/lib64/libwfduibcsrc_vendor.so
 vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE=vendor.qti.hardware.wifidisplaysession@1.0-vendor
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Widevine DRM
