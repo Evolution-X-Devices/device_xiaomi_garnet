@@ -1428,7 +1428,6 @@ vendor/etc/msm_irqbalance.conf
 vendor/bin/init.class_main.sh
 vendor/bin/init.crda.sh
 vendor/bin/init.mdm.sh
-vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.coex.sh
 vendor/bin/init.qcom.efs.sync.sh
 vendor/bin/init.qcom.post_boot.sh
