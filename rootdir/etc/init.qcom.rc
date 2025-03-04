@@ -393,9 +393,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    # Create the directory used by qrtr-lookup
-    mkdir /data/vendor/qrtr 0775 system system
-
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
@@ -726,7 +723,6 @@ service wifi-crda /vendor/bin/init.crda.sh
 on property:sys.boot_completed=1
     start qcom-post-boot
     start qti-testscripts
-    start qrtr-lookup
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
@@ -984,11 +980,3 @@ on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.d
     chmod 0666 /sys/class/thermal/cooling_device48/cur_state
     chmod 0666 /sys/class/thermal/cooling_device49/cur_state
     chmod 0666 /sys/class/thermal/cooling_device50/cur_state
-
-service qrtr-lookup /vendor/bin/qrtr-lookup
-    class core
-    user system
-    group system
-    disabled
-    oneshot
-
