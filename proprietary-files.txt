@@ -167,7 +167,7 @@ vendor/lib64/libsysmon_cdsp_skel.so
 # CNE
 vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
-vendor/bin/qms;DISABLE_CHECKELF
+vendor/bin/qms
 vendor/etc/cne/mwqem.conf
 vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -202,11 +202,11 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/qms.rc
-vendor/lib64/libcne.so;DISABLE_CHECKELF
+vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
-vendor/lib64/libmasc.so;DISABLE_CHECKELF
+vendor/lib64/libmasc.so
 vendor/lib64/libqms_client.so
 vendor/lib64/libshsc.so
 vendor/lib64/libwms.so
@@ -1272,7 +1272,7 @@ vendor/bin/engine-service
 vendor/bin/garden_app
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti;DISABLE_CHECKELF
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/lowirpcd
 vendor/bin/mlid
 vendor/bin/slim_daemon
