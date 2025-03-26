@@ -173,7 +173,6 @@ on early-boot
     verity_update_state
 
 on boot
-    chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/charger_temp
     chown system system /sys/class/thermal/thermal_message/board_sensor_temp_comp
     chown system system /sys/class/thermal/thermal_message/cpu_nolimit_temp
@@ -215,6 +214,12 @@ on boot
     chown system system /dev/cpuctl/misc/cgroup.procs
     chmod 0664 /dev/cpuctl/misc/cgroup.procs
     chmod 0664 /dev/cpuctl/misc/tasks
+
+    # Thermal Profiles permissions
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0666 /sys/class/thermal/thermal_message/temp_state
+    chown system system /sys/class/thermal/thermal_message/temp_stat
 
     #ufscld functions permission
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/auto_hibern8_enable
