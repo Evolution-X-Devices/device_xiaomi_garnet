@@ -382,7 +382,6 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayGarnetJPEsim \
     LineageSDKOverlayGarnet \
     LineageSettingsOverlayGarnet \
-    LineageSystemUIOverlayGarnet \
     SettingsOverlayGarnet \
     SettingsProviderOverlayGarnetPoco \
     SettingsProviderOverlayGarnetRedmi \
