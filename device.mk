@@ -238,6 +238,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.xiaomi \
     android.hardware.health-service.xiaomi_recovery
 
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor:64 \
