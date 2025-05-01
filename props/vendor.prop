@@ -135,6 +135,7 @@ debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.hw=0
+debug.sf.latch_unsignaled=0
 debug.sf.late.app.duration=20500000
 debug.sf.late.sf.duration=10500000
 debug.sf.layer_caching_active_layer_timeout_ms=1000
