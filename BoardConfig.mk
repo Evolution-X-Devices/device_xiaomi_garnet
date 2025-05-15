@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/garnet
 
+# Inherit from proprietary files for miuicamera
+-include device/xiaomi/miuicamera-garnet/BoardConfig.mk
+
 # A/B
 AB_OTA_PARTITIONS := \
     boot \
