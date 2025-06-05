@@ -73,7 +73,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // Start Thermal Management Services
         ThermalUtils.startService(context);
 
-        // Start Refresh Rate Service
+        // Start Refresh Rate Services
         RefreshUtils.startService(context);
     }
 }
