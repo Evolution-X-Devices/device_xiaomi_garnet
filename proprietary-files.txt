@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from garnet OS2.0.9.0.VNRMIXM
+# All unpinned blobs below are extracted from garnet OS2.0.10.0.VNRMIXM
 
 # Current blobs with ELF checks disabled:
 # android.hardware.gnss-aidl-service-qti, android.hardware.gnss-aidl-impl-qti depend on undefined symbol _ZN4aidl7android8hardware4gnss5IGnss10descriptorE
