@@ -289,10 +289,6 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint \
     vendor_vm-system_mountpoint
 
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
