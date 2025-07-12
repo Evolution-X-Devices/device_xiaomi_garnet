@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/garnet
 
+# Inherit from proprietary files for miuicamera
+-include device/xiaomi/garnet-miuicamera/BoardConfig.mk
+
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
