@@ -1521,18 +1521,27 @@ vendor/lib64/qti.video.utils.videobufferlayout.so
 
 # Media (Dolby)
 vendor/etc/dolby/dax-default.xml
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdeccfg.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/soundfx/libhwdap.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswvqe.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
+# Media (Dolby) - YUDI_OS1.0.2.0.UMHCNXM
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc|bc1e134139c7dd0e5b4f98952aa51c629ea66dc7
+vendor/etc/media_codecs_dolby_audio.xml|3119c61cc5471bb7902ac8b1ccd5785bb55a1918
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|556fa97b7fc5a3a8efd89aa413a4e6b508a9425e
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service|27e7aed8b219b082a66b8150e018f1db1c2bbcd8
+vendor/lib64/libcodec2_soft_ac4dec.so|3f7da3e48b391f94e3e4aedbbea514eb5f4283ed
+vendor/lib64/libcodec2_soft_ddpdec.so|55275a7abcfde2d3f44fc48f9dd7a976fb98ebc1
+vendor/lib64/libcodec2_store_dolby.so|d0a85979f9c622cc5ad4071635271fe51c9ecb55
+vendor/lib64/libdapparamstorage.so|6dd6cf3bd92710cdba1cb981b52e64dca2407bd1
+vendor/lib64/libdeccfg.so|8ef3036d0b7a5f2caae277e21b5cf5174b2f085f
+vendor/lib64/libdlbdsservice.so|d4f9aa59644b1f90b221f188fc25a0b54db84c39
+vendor/lib64/libdlbpreg.so|e1588ec15d1b328c037ffd2f80c426dcd90d6467
+vendor/lib64/soundfx/libdlbvol.so|1ebd52ecc1a42e1ec0eb785e541b08d191bf9924
+vendor/lib64/soundfx/libhwdap.so|1058720b5930196370e1e792a14e60e16c9a46e1
+vendor/lib64/soundfx/libswgamedap.so|cac12e23c860270775986d56c8f9b8f58ac07be3
+vendor/lib64/soundfx/libswvqe.so|bcfc527b34066600c4b747cced45ab8012e4c1a5
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|63db226e3f51448c094ef00ec9a92be089050219
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|e5c3409c9422297055cc79eff526e625be79ac32
 
 # Media Config
 vendor/etc/media_codecs_c2_audio.xml
