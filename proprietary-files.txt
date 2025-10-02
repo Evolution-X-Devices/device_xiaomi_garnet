@@ -1519,7 +1519,23 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
+# Media (Dolby)
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswvqe.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+
 # Media Config
+vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_parrot_v0.xml
 vendor/etc/media_codecs_performance_parrot_v0.xml
 vendor/etc/media_parrot_v0/video_system_specs.json
