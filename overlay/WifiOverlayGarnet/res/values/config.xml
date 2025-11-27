@@ -96,5 +96,5 @@
          HAL as a blocking call. In such a case the country code will be applied
          immediately after the country code is sent to the driver (if the method returns a
          success). -->
-    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">false</bool>
 </resources>
