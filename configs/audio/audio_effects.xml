@@ -82,6 +82,8 @@
         <library name="gamedap" path="libswgamedap.so"/>
         <!--DOLBY VQE-->
         <library name="vqe" path="libswvqe.so"/>
+        <!--DOLBY SPATIALIZER-->
+        <library name="spatializer" path="libswspatializer.so"/>
         <!--DOLBY END-->
     </libraries>
     <effects>
@@ -136,35 +138,22 @@
         <effect name="dlb_music_listener" library="dvl" uuid="40f66c8b-5aa5-4345-8919-53ec431aaa98"/>
         <effect name="dlb_ring_listener" library="dvl" uuid="21d14087-558a-4f21-94a9-5002dce64bce"/>
         <effect name="dlb_alarm_listener" library="dvl" uuid="6aff229c-30c6-4cc8-9957-dbfe5c1bd7f6"/>
-        <!--<effect name="dlb_system_listener" library="dvl" uuid="874db4d8-051d-4b7b-bd95-a3bebc837e9e"/>-->
+        <effect name="dlb_system_listener" library="dvl" uuid="874db4d8-051d-4b7b-bd95-a3bebc837e9e"/>
         <effect name="dlb_notification_listener" library="dvl" uuid="1f0091e3-6ad8-40fe-9b09-5948f9a26e7e"/>
+        <effect name="dlb_voice_call_listener" library="dvl" uuid="58d13383-b41d-05df-d94e-bb23db293260"/>
         <!--DOLBY GAME-->
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
         <!--DOLBY VQE-->
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
+        <!--DOLBY SPATIALIZER-->
+        <effect name="spatializer" library="spatializer" uuid="ccd4cf09-a79d-46c2-9aae-06a1698d6c8f"/>
         <!--DOLBY END-->
     </effects>
     <postprocess>
-        <stream type="music">
-            <apply effect="music_helper"/>
-            <apply effect="dlb_music_listener"/> <!--DOLBY ADD-->
-        </stream>
-        <stream type="ring">
-            <apply effect="ring_helper"/>
-            <apply effect="dlb_ring_listener"/> <!--DOLBY ADD-->
-        </stream>
-        <stream type="alarm">
-            <apply effect="alarm_helper"/>
-            <apply effect="dlb_alarm_listener"/> <!--DOLBY ADD-->
-        </stream>
         <stream type="voice_call">
             <apply effect="voice_helper"/>
         </stream>
-        <stream type="notification">
-            <apply effect="notification_helper"/>
-            <apply effect="dlb_notification_listener"/> <!--DOLBY ADD-->
-        </stream>
-    </postprocess>  
+    </postprocess>
     <preprocess>
         <stream type="voice_communication">
             <apply effect="aec"/>

@@ -172,8 +172,6 @@ ro.media.xml_variant.profiles=_parrot_v0
 # Media (Dolby)
 ro.vendor.audio.dolby.dax.support=true
 ro.vendor.audio.dolby.surround.enable=true
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
