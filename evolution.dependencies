@@ -36,5 +36,9 @@
     "target_path": "vendor/xiaomi/garnet-miuicamera",
     "branch": "lineage-23.0",
     "remote": "gitlab"
+  },
+  {
+	"repository": "packages_apps_GameBar",
+	"target_path": "packages/apps/GameBar"
   }
 ]
