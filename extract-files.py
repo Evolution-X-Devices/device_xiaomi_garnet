@@ -56,6 +56,8 @@ blob_fixups: blob_fixups_user_type = {
             'libgrpc++_unsecure.so',
             'libgrpc++_unsecure_prebuilt.so'
         ),
+    'vendor/bin/qguard': blob_fixup()
+        .add_needed('libbase_shim.so'),
     (
         'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service',
         'vendor/bin/hw/vendor.dolby.media.c2@1.0-service',
