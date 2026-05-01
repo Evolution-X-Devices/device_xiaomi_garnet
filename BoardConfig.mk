@@ -100,8 +100,7 @@ TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/parrot_GKI.config \
     vendor/garnet_GKI.config \
-    vendor/debugfs.config \
-    vendor/extra.config
+    vendor/debugfs.config
 
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
