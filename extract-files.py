@@ -49,6 +49,13 @@ blob_fixups: blob_fixups_user_type = {
             'libprotobuf-cpp-full-21.7.so'
         ),
     (
+        'odm/lib64/hw/fingerprint.fpc_fod.default.so',
+        'odm/lib64/hw/fingerprint.goodix_fod.default.so',
+        'odm/lib64/libgf_hal.so',
+        'vendor/lib64/libQSEEComAPI.so'
+    ): blob_fixup()
+        .replace_needed('libion.so', 'libion_shim.so'),
+    (
         'vendor/bin/hw/android.hardware.gnss-aidl-service-qti',
         'vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so',
         'vendor/lib64/libgarden.so',
