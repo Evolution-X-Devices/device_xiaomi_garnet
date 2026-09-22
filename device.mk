@@ -38,7 +38,6 @@ BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # Audio
-$(call soong_config_set, android_hardware_audio, run_64bit, true)
 $(call soong_config_set_bool, android_hardware_audio, skip_speaker_layout_channel_mask_field, true)
 
 PRODUCT_PACKAGES += \
