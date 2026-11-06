@@ -156,7 +156,8 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    duck_rkp
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
