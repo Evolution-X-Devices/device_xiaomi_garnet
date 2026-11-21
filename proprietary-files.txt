@@ -1418,13 +1418,6 @@ vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.touch_boot.rc
 
-# Kernel
-vendor/bin/init.kernel.post_boot-parrot.sh
-vendor/bin/init.kernel.post_boot.sh
-vendor/bin/init.qti.kernel.sh
-vendor/bin/vendor_modprobe.sh
-vendor/etc/init/hw/init.qti.kernel.rc
-
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
@@ -1672,7 +1665,6 @@ vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # QTI
-vendor/bin/init.qti.write.sh
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/lib64/libsoc_helper.so
